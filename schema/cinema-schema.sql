@@ -14,9 +14,9 @@ CREATE TABLE films (
 CREATE TABLE snacks (
     snack_id INT AUTO_INCREMENT,
     food VARCHAR(75) NOT NULL,
-    food_price DECIMAL NOT NULL,
+    food_price DECIMAL(10,2) NOT NULL,
     drink VARCHAR(75) NOT NULL,
-    drink_price DECIMAL NOT NULL,
+    drink_price DECIMAL(10,2) NOT NULL,
     PRIMARY KEY (snack_id)
 );
 
@@ -25,7 +25,7 @@ CREATE TABLE orders (
     fk_film_id INT NOT NULL,
     fk_snack_id INT NOT NULL,
     seat_number SMALLINT NOT NULL,
-    ticket_price DECIMAL NOT NULL,
+    ticket_price DECIMAL(10,2) NOT NULL,
     row_num CHAR(1) NOT NULL,
     PRIMARY KEY (order_id),
     FOREIGN KEY (fk_film_id) REFERENCES films(film_id),
