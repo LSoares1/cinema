@@ -36,6 +36,6 @@ CREATE TABLE orders (
     row_num CHAR(1) NOT NULL,
     PRIMARY KEY (order_id),
     FOREIGN KEY (fk_film_id) REFERENCES films(film_id),
-    FOREIGN KEY (fk_snack_id) REFERENCES snacks(snack_id)
+    FOREIGN KEY (fk_snack_id) REFERENCES snacks(snack_id),
     FOREIGN KEY (fk_drink_id) REFERENCES drinks(drink_id)
 );
